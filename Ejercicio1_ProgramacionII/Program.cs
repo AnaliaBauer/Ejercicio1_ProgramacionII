@@ -134,9 +134,6 @@ bool result= true;
     Console.WriteLine($"{dia} de {nombreMes} de {anio}");
 
 
-
-
-
 }
 
 
