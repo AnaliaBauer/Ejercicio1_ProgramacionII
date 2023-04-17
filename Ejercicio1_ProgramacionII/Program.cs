@@ -9,23 +9,25 @@
 
 using System;
 
-int dia = 0;
+int dia=0;
 int mes = 0;
 int anio = 0;
-bool result = false;
+bool result= true;
 
 {
+
+   
 
     do
     {
 
-
         Console.Write("Ingrese el día: ");
-        result = int.TryParse(Console.ReadLine(), out dia);
+      result = int.TryParse(Console.ReadLine(), out dia);
 
         if (!result)
         {
             Console.WriteLine("Dato no valido, reintente");
+           
 
         }
     } while (!(dia >= 1 && dia <= 31));
@@ -80,10 +82,7 @@ bool result = false;
 
         case 2:
             nombreMes = "Febrero";
-            if (añoBisiesto == true)
-            {
-                Console.WriteLine("Es año bisiesto");
-            }
+        
             break;
 
         case 3:
@@ -128,7 +127,16 @@ bool result = false;
             break;
 
     }
+    if (añoBisiesto)
+    {
+        Console.WriteLine("Es año bisiesto");
+    }
     Console.WriteLine($"{dia} de {nombreMes} de {anio}");
+
+
+
+
+
 }
 
 
